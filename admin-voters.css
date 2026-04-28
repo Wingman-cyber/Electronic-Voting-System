@@ -1,0 +1,75 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: #f4f7fb;
+  padding: 30px;
+  color: #1e293b;
+}
+
+/* ===== TITLE ===== */
+.title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ===== GRID LAYOUT ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
+  border-left: 5px solid #3b82f6;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== TEXT STYLING ===== */
+.card b {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 3px 0;
+  color: #475569;
+}
+
+/* ===== STATUS BADGE ===== */
+.status {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.voted {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.not-voted {
+  background: #fee2e2;
+  color: #dc2626;
+}

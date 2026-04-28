@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEBC Admin Dashboard</title>
+
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <h2 class="logo">🗳️ IEBC ADMIN</h2>
+
+    <a class="active" href="#">Dashboard</a>
+    <a id="manageCandidatesBtn" href="admin-candidates.html">Candidates</a>
+    <a id="viewVotersBtn" href="admin-voters.html">Voters</a>
+    <a id="settingsBtn" href="admin-settings.html">Settings</a>
+    <a id="resultsBtn" href="results.html">Results</a>
+    <a href="index.html" class="back-btn">← Back</a>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+
+    <!-- ================= TOPBAR ================= -->
+    <div class="topbar">
+      <div>
+        <h2>🛠️ Admin Control Panel</h2>
+        <p>Logged in as: <span id="adminName">Loading...</span></p>
+      </div>
+
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <!-- ================= STATS ================= -->
+    <div class="stats">
+
+      <div class="stat-card">
+        <h3 id="totalVoters">0</h3>
+        <p>Total Voters</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="totalVotes">0</h3>
+        <p>Total Votes</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="turnout">0%</h3>
+        <p>Turnout</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="totalCandidates">0</h3>
+        <p>Candidates</p>
+      </div>
+
+    </div>
+
+    <!-- ================= ADDED SECTIONS ================= -->
+    <div id="leaderBox"></div>
+
+    <!-- ================= ACTION CARDS ================= -->
+    <div class="content">
+
+      <div class="card">
+        <h3>👥 Manage Candidates</h3>
+        <p>Add, edit, or remove candidates</p>
+        <a id="manageCandidatesBtn" href="admin-candidates.html" class="card-btn">Open</a>
+      </div>
+
+      <div class="card">
+        <h3>📋 View Voters</h3>
+        <p>See all registered voters</p>
+        <a id="viewVotersBtn" href="admin-voters.html" class="card-btn">Open</a>
+      </div>
+
+      <div class="card">
+        <h3>⚙️ Settings</h3>
+        <p>Control election parameters</p>
+        <a id="settingsBtn" href="admin-settings.html" class="card-btn">Open</a>
+      </div>
+
+      <div class="card">
+        <h3>📊 Results</h3>
+        <p>View live election results</p>
+        <a id="resultsBtn" href="results.html" class="card-btn">Open</a>
+      </div>
+
+    </div>
+
+    <!-- ================= CHARTS ================= -->
+    <div class="charts">
+
+      <div class="chart-card">
+        <h3>📊 Votes by County</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>🥧 Candidate Distribution</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script type="module" src="js/admin-dashboard.js"></script>
+</body>
+</html>

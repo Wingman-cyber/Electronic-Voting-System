@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - IEBC Voting System</title>
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Register</h2>
+
+  <form id="registerForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="idNumber" placeholder="ID Number" required>
+    <input type="number" id="age" placeholder="Age" min="18" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+
+<select id="county" required>
+  <option value="" disabled selected>Select County</option>
+
+  <option>Mombasa</option>
+  <option>Kwale</option>
+  <option>Kilifi</option>
+  <option>Tana River</option>
+  <option>Lamu</option>
+  <option>Taita Taveta</option>
+
+  <option>Garissa</option>
+  <option>Wajir</option>
+  <option>Mandera</option>
+
+  <option>Marsabit</option>
+  <option>Isiolo</option>
+  <option>Meru</option>
+  <option>Tharaka Nithi</option>
+
+  <option>Embu</option>
+  <option>Kitui</option>
+  <option>Machakos</option>
+  <option>Makueni</option>
+
+  <option>Nyandarua</option>
+  <option>Nyeri</option>
+  <option>Kirinyaga</option>
+  <option>Murang'a</option>
+  <option>Kiambu</option>
+
+  <option>Turkana</option>
+  <option>West Pokot</option>
+  <option>Samburu</option>
+  <option>Trans Nzoia</option>
+  <option>Uasin Gishu</option>
+  <option>Elgeyo Marakwet</option>
+  <option>Nandi</option>
+  <option>Baringo</option>
+  <option>Laikipia</option>
+  <option>Nakuru</option>
+
+  <option>Narok</option>
+  <option>Kajiado</option>
+  <option>Kericho</option>
+  <option>Bomet</option>
+
+  <option>Kakamega</option>
+  <option>Vihiga</option>
+  <option>Bungoma</option>
+  <option>Busia</option>
+
+  <option>Siaya</option>
+  <option>Kisumu</option>
+  <option>Homa Bay</option>
+  <option>Migori</option>
+
+  <option>Nyamira</option>
+  <option>Kisii</option>
+
+  <option>Nairobi</option>
+</select>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p>Already have an account? <a href="login.html">Login</a></p>
+  <p id="message"></p>
+</div>
+
+<script type="module" src="js/register.js"></script>
+</body>
+</html>

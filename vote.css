@@ -1,0 +1,172 @@
+/* ================= BASE ================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  color: #333;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: #006400;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 4px solid red;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  text-decoration: none;
+  background: white;
+  color: #006400;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #f2f2f2;
+  transform: scale(1.05);
+}
+
+/* ================= TITLES ================= */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ================= POSITIONS ================= */
+.position-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 30px;
+}
+
+.position-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.position-card:hover {
+  background: #006400;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ================= CANDIDATE GRID ================= */
+.vote-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+/* ================= CANDIDATE CARD ================= */
+.candidate-card {
+  background: white;
+  width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* CRITICAL FIX */
+  transition: 0.3s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= IMAGE FIX (IMPORTANT) ================= */
+.candidate-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;         /* crops image nicely */
+  object-position: center;   /* keeps focus centered */
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ================= TEXT ================= */
+.candidate-card h3 {
+  margin: 10px 0 5px;
+}
+
+.candidate-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= VOTE BUTTON ================= */
+.voteBtn {
+  margin: 12px;
+  padding: 10px;
+  border: none;
+  background: #006400;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  width: calc(100% - 24px);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.voteBtn:hover {
+  background: red;
+  transform: scale(1.03);
+}
+
+.voteBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ================= BACK BUTTON ================= */
+#backBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#backBtn:hover {
+  background: #333;
+}
+
+/* ================= FILTER SECTION ================= */
+#filterSection {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* ================= HIDDEN ================= */
+.hidden {
+  display: none;
+}

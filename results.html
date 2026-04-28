@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results - IEBC Voting System</title>
+
+  <link rel="stylesheet" href="css/results.css">
+
+  <!-- Optional: Chart.js if you add charts later -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="header-text">
+    <h1>📊 IEBC Election Results</h1>
+    <p>Live Results Dashboard</p>
+  </div>
+
+  <a href="index.html" class="back-btn">← Back</a>
+</header>
+
+<!-- ================= POSITION SELECTOR ================= -->
+<section class="positions">
+  <button onclick="loadResults('president')">President</button>
+  <button onclick="loadResults('governor')">Governor</button>
+  <button onclick="loadResults('senator')">Senator</button>
+  <button onclick="loadResults('mp')">MP</button>
+  <button onclick="loadResults('womenrep')">Women Rep</button>
+  <button onclick="loadResults('mca')">MCA</button>
+</section>
+
+<!-- ================= RESULTS AREA ================= -->
+<section class="results-container" id="resultsContainer">
+
+  <!-- Default state -->
+  <div class="placeholder" id="placeholder">
+    <p>Select a position to view results</p>
+  </div>
+
+  <!-- Dynamic content will be injected here -->
+</section>
+
+<!-- ================= LOADING SPINNER ================= -->
+<div id="loading" style="display:none; text-align:center; margin-top:20px;">
+  <p>⏳ Loading results...</p>
+</div>
+
+<!-- ================= EMPTY STATE ================= -->
+<div id="emptyState" style="display:none; text-align:center; margin-top:20px;">
+  <p>No votes recorded yet.</p>
+</div>
+
+<!-- ================= MAIN SCRIPT ================= -->
+<script type="module" src="js/results.js"></script>
+
+</body>
+</html>

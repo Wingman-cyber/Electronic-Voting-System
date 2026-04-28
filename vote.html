@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote - IEBC</title>
+  <link rel="stylesheet" href="css/vote.css">
+</head>
+
+<body>
+
+<header class="top-header">
+  <h1>🗳️ IEBC Voting System</h1>
+  <a href="index.html" class="back-btn">← Back</a>
+</header>
+
+<!-- STEP 1: POSITIONS -->
+<section id="positions">
+  <h2>Select Position</h2>
+
+  <div class="position-container">
+    <div class="position-card" onclick="loadCandidates('president')">President</div>
+    <div class="position-card" onclick="loadCandidates('governor')">Governor</div>
+    <div class="position-card" onclick="loadCandidates('senator')">Senator</div>
+    <div class="position-card" onclick="loadCandidates('mp')">Member of Parliament</div>
+    <div class="position-card" onclick="loadCandidates('womenrep')">Women Representative</div>
+    <div class="position-card" onclick="loadCandidates('mca')">MCA</div>
+  </div>
+</section>
+
+<!-- STEP 2: CANDIDATES -->
+<section id="candidates" class="hidden">
+
+  <h2 id="positionTitle"></h2>
+
+  <!-- optional filter area -->
+  <div id="filterSection"></div>
+
+  <!-- candidates render here -->
+  <div id="candidateList" class="vote-container"></div>
+
+  <button id="backBtn" onclick="goBack()">⬅ Back</button>
+
+</section>
+
+<!-- SCRIPTS -->
+<script type="module" src="js/vote-candidates.js"></script>
+<script type="module" src="js/vote.js"></script>
+
+</body>
+</html>

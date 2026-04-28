@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  background: #006400;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 4px solid red;
+}
+
+/* TEXT BLOCK */
+.header-text h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* PUSH BUTTON TO FAR RIGHT */
+.back-btn {
+  margin-left: auto;   /* 🔥 THIS IS THE KEY */
+  text-decoration: none;
+  background: white;
+  color: #006400;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #f2f2f2;
+  transform: scale(1.05);
+}
+
+.container {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 360px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #008000;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00b300;
+}
+
+#message {
+  margin-top: 10px;
+  color: #ffcc00;
+  font-weight: bold;
+}

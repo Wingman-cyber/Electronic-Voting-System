@@ -1,0 +1,92 @@
+/* ================= BASE ================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+/* ================= INPUTS ================= */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* ================= PASSWORD GROUP ================= */
+.password-group {
+  position: relative;
+  margin: 8px 0;
+}
+
+/* override ONLY padding (not everything) */
+.password-group input {
+  padding-right: 45px;
+}
+
+/* eye button */
+#togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  padding: 5px;
+}
+
+#togglePassword:hover {
+  color: black;
+}
+
+/* ================= BUTTON ================= */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #008000;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00b300;
+}
+
+/* ================= MESSAGE ================= */
+#message {
+  margin-top: 10px;
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IEBC Voting Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- ✅ Chart.js REQUIRED -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2 class="logo">🗳️ IEBC</h2>
+    <a href="overview.html" id="overviewNav">Overview</a>
+    <a href="vote.html" id="voteNav">Vote</a>
+    <a href="results.html" id="resultsNav">Results</a>
+    <a href="index.html" class="back-btn">← Back</a>
+    <a href="#" id="logoutNav">Logout</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="user">👤 <span id="userNameTop">Loading...</span></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- STATS -->
+    <div class="stats">
+
+      <div class="stat-card">
+        <h3 id="userCountyTop">-</h3>
+        <p>County</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="userAgeTop">-</h3>
+        <p>Age</p>
+      </div>
+
+      <div class="stat-card">
+        <h3 id="voteStatusTop">-</h3>
+        <p>Voting Status</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>2026</h3>
+        <p>Election Year</p>
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- PROFILE -->
+      <div class="card large">
+        <h3>👤 Voter Information</h3>
+
+        <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+        <p><strong>ID Number:</strong> <span id="userId">Loading...</span></p>
+        <p><strong>County:</strong> <span id="userCounty">Loading...</span></p>
+        <p><strong>Age:</strong> <span id="userAge">Loading...</span></p>
+
+        <div class="vote-status-box">
+          <p><strong>Election Status:</strong></p>
+          <span id="voteStatus" class="status-badge">Loading...</span>
+        </div>
+
+        <button id="voteBtn" class="primary-btn" onclick="window.location.href='vote.html'">
+          🗳️ Go Vote
+        </button>
+      </div>
+
+      <!-- ADMIN -->
+      <div class="card" id="adminCard" style="display:none;">
+        <h3>🛠️ Admin Panel</h3>
+        <button class="secondary-btn">👥 Manage Candidates</button>
+        <button class="secondary-btn">📋 View Voters</button>
+        <button class="secondary-btn">⚙️ Settings</button>
+      </div>
+
+      <!-- ANALYTICS -->
+      <div class="analytics-grid">
+
+        <!-- LEADER -->
+        <div id="leaderBox" class="card leader-card">
+          <h3>🏆 Leading Candidate</h3>
+          <p>Loading...</p>
+        </div>
+
+        <!-- BAR CHART -->
+        <div class="card chart-card">
+          <h3>📊 Votes by County</h3>
+          <canvas id="barChart"></canvas>
+        </div>
+
+        <!-- POSITION LEADERS -->
+        <div id="positionLeaders" class="card">
+          <h3>📌 Position Leaders</h3>
+          <p>Coming soon...</p>
+        </div>
+
+        <!-- PIE CHART -->
+        <div class="card chart-card full-width">
+          <h3>🥧 Vote Distribution</h3>
+          <canvas id="pieChart"></canvas>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>
